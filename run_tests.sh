@@ -4,7 +4,7 @@ set -e
 
 echo "Compiling..."
 
-javac -cp .:junit-platform-console-standalone.jar StringExcerises.java StringExercisesTest.java
+javac -cp .:junit-platform-console-standalone.jar StringExercises.java StringExercisesTest.java
 
 echo "Running tests..."
 
