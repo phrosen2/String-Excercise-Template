@@ -1,4 +1,3 @@
-```markdown
 # PA13: Basic String Exercises
 
 ## Description/Instructions
@@ -184,6 +183,3 @@ reflection as well!
 
 There are a ton of tests for this one — you should make sure to run all of
 them before submitting to make sure you have caught the corner cases.
-```
-
----
