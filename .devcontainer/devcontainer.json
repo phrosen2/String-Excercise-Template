@@ -1,0 +1,33 @@
+{
+  "name": "AP CS A - Java",
+  "image": "mcr.microsoft.com/devcontainers/java:1-21-bullseye",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "vscjava.vscode-java-test",
+        "redhat.java",
+        "streetsidesoftware.code-spell-checker"
+      ],
+      "settings": {
+        "editor.tabSize": 4,
+        "editor.formatOnSave": true,
+
+        "editor.inlineSuggest.enabled": false,
+        "editor.suggest.preview": false,
+
+        "github.copilot.enable": false,
+        "github.copilot.inlineSuggest.enable": false,
+
+        "chat.commandCenter.enabled": false,
+
+        "vsintellicode.modify.editor.suggestSelection": "none"
+      }
+    }
+  },
+
+  "postCreateCommand": "java -version",
+
+  "remoteUser": "vscode"
+}
