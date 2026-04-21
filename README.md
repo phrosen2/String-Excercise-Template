@@ -1,63 +1,189 @@
-# Temp Converter
+```markdown
+# PA13: Basic String Exercises
 
 ## Description/Instructions
 
-The goal of this assignment is to write a program that converts from a user's Fahrenheit temperature to Celsius using the following formula:
+The goal of this assignment is to start practicing using the String methods
+that can be found at the Quick Reference Document.
 
-$$\text{Celsius} = \frac{5}{9} \times (\text{Fahrenheit} - 32)$$
+For this assignment, you must follow directions **exactly**. **Create a PA13
+Java Project and create a PA13.java class. Make sure you don't make a module
+on accident.** When you run the code it will be blank.
 
+After you create the class, go to:
+https://drive.google.com/file/d/1xF_l00cpSgYEa-GO-exRiPmCIX7AAJs6/view?usp=sharing
+and **COPY and PASTE** the contents of that file into your PA13.java,
+completely overwriting everything in your file.
 
-1. Line 1 of the program output **MUST** ask the user for the temperature in Fahrenheit. This will be an integer.
-2. Line 2 of the program output **MUST** provide the temperature in Celsius. This can be a decimal number. This value does not need to be rounded.
-3. **Hint:** You will need what is called a `Scanner` to receive input from a user in the console. See ScannerExample.java for an example.
+**From here, you need to fill out each method and follow instructions exactly.
+For this project, I am no longer walking you through how to test each method,
+that is up to you.**
 
-Keep in mind that you may need to declare variables to hold intermediate values or store input and output. Your program can have as many lines as you would like inside the `.java` file.
+If you got everything copy-pasted correctly, it should look like this when you
+run it:
+
+```
+<terminated> PA23 [Java Application] C:\Users\tmenghini\Documents
+makeAbba prints: null
+```
 
 ---
 
-## Output
+## Example Inputs/Returns
 
-Your output **MUST** exactly match the following example (using an input of 70°F):
+### Method: makeAbba
 
-```
-Please give me a temperature in fahrenheit: 70
-The temperature in celsius is: 21.11111111111111
-```
+| Test Case Name | String a | String b | Expected Return Value |
+|----------------|----------|----------|-----------------------|
+| makeAbba1      | "Hi"     | "Bye"    | "HiByeByeHi"          |
+| makeAbba2      | "Yo"     | "Alice"  | "YoAliceAliceYo"      |
+| makeAbba3      | "What"   | "Up"     | "WhatUpUpWhat"        |
+| makeAbba4      | "aaa"    | "bbb"    | "aaabbbbbbaaa"        |
+| makeAbba5      | "x"      | "y"      | "xyyx"                |
+| makeAbba6      | "x"      | ""       | "xx"                  |
+| makeAbba7      | ""       | "y"      | "yy"                  |
+| makeAbba8      | "Bo"     | "Ya"     | "BoYaYaBo"            |
+| makeAbba9      | "Ya"     | "Ya"     | "YaYaYaYa"            |
 
 ---
 
-## Hints / Common Issues
+### Method: makeTags
 
-1. **Integer division:** A common issue is getting `0°C` or `-0°C` no matter what you type. This happens because you may have used integer division instead of double division.
+| Test Case Name | String tag  | String word | Expected Return Value     |
+|----------------|-------------|-------------|---------------------------|
+| makeTags1      | "i"         | "Yay"       | "\<i>Yay\</i>"            |
+| makeTags2      | "i"         | "Hello"     | "\<i>Hello\</i>"          |
+| makeTags3      | "cite"      | "Yay"       | "\<cite>Yay\</cite>"      |
+| makeTags4      | "address"   | "here"      | "\<address>here\</address>"|
+| makeTags5      | "body"      | "Heart"     | "\<body>Heart\</body>"    |
+| makeTags6      | "i"         | "i"         | "\<i>i\</i>"              |
+| makeTags7      | "i"         | ""          | "\<i>\</i>"               |
+
+---
+
+### Method: comboString
+
+| Test Case Name | String a  | String b  | Expected Return Value |
+|----------------|-----------|-----------|-----------------------|
+| comboString1   | "Hello"   | "hi"      | "hiHellohi"           |
+| comboString2   | "hi"      | "Hello"   | "hiHellohi"           |
+| comboString3   | "aaa"     | "b"       | "baaab"               |
+| comboString4   | "b"       | "aaa"     | "baaab"               |
+| comboString5   | "aaa"     | ""        | "aaa"                 |
+| comboString6   | ""        | "bb"      | "bb"                  |
+| comboString7   | "aaa"     | "1234"    | "aaa1234aaa"          |
+| comboString8   | "aaa"     | "bb"      | "bbaaabb"             |
+| comboString9   | "a"       | "bb"      | "abba"                |
+| comboString10  | "bb"      | "a"       | "abba"                |
+| comboString11  | "xyz"     | "ab"      | "abxyzab"             |
+
+---
+
+### Method: atFirst
+
+| Test Case Name | String str | Expected Return Value |
+|----------------|------------|-----------------------|
+| atFirst1       | "hello"    | "he"                  |
+| atFirst2       | "hi"       | "hi"                  |
+| atFirst3       | "h"        | "h@"                  |
+| atFirst4       | ""         | "@@"                  |
+| atFirst5       | "kitten"   | "ki"                  |
+| atFirst6       | "java"     | "ja"                  |
+| atFirst7       | "j"        | "j@"                  |
+
+---
+
+### Method: frontAgain
+
+| Test Case Name | String str | Expected Return Value |
+|----------------|------------|-----------------------|
+| frontAgain1    | "edited"   | true                  |
+| frontAgain2    | "edit"     | false                 |
+| frontAgain3    | "ed"       | true                  |
+| frontAgain4    | "jj"       | true                  |
+| frontAgain5    | "jjj"      | true                  |
+| frontAgain6    | "jjjj"     | true                  |
+| frontAgain7    | "jjjk"     | false                 |
+| frontAgain8    | "x"        | false                 |
+| frontAgain9    | ""         | false                 |
+| frontAgain10   | "java"     | false                 |
+| frontAgain11   | "javaja"   | true                  |
+
+---
+
+### Method: without2
+
+| Test Case Name | String str   | Expected Return Value |
+|----------------|--------------|-----------------------|
+| without21      | "HelloHe"    | "lloHe"               |
+| without22      | "HelloHi"    | "HelloHi"             |
+| without23      | "Hi"         | ""                    |
+| without24      | "Chocolate"  | "Chocolate"           |
+| without25      | "xxx"        | "x"                   |
+| without26      | "xx"         | ""                    |
+| without27      | "x"          | "x"                   |
+| without28      | ""           | ""                    |
+| without29      | "Fruits"     | "Fruits"              |
+
+---
+
+### Method: doubleChar
+
+| Test Case Name | String str   | Expected Return Value    |
+|----------------|--------------|--------------------------|
+| doubleChar1    | "The"        | "TThhee"                 |
+| doubleChar2    | "AAbb"       | "AAAAbbbb"               |
+| doubleChar3    | "Hi-There"   | "HHii--TThheerree"       |
+| doubleChar4    | "Word!"      | "WWoorrdd!!"             |
+| doubleChar5    | "! "         | "!!  "                   |
+| doubleChar6    | ""           | ""                       |
+| doubleChar7    | "a"          | "aa"                     |
+| doubleChar8    | ". "         | "..  "                   |
+| doubleChar9    | "aa"         | "aaaa"                   |
+
+---
+
+### Method: countHi
+
+| Test Case Name | String str            | Expected Return Value |
+|----------------|-----------------------|-----------------------|
+| countHi1       | "abc hi ho"           | 1                     |
+| countHi2       | "ABChi hi"            | 2                     |
+| countHi3       | "hihi"                | 2                     |
+| countHi4       | "hiHIhi"              | 2                     |
+| countHi5       | ""                    | 0                     |
+| countHi6       | "h"                   | 0                     |
+| countHi7       | "hi"                  | 1                     |
+| countHi8       | "Hi is no HI on ahI"  | 0                     |
+| countHi9       | "hiho not HOHIhi"     | 2                     |
+
+---
+
+### Method: xyBalance
+
+| Test Case Name | String str     | Expected Return Value |
+|----------------|----------------|-----------------------|
+| xyBalance1     | "aaxbby"       | true                  |
+| xyBalance2     | "aaxbb"        | false                 |
+| xyBalance3     | "yaaxbb"       | false                 |
+| xyBalance4     | "yaaxbby"      | true                  |
+| xyBalance5     | ""             | true                  |
+| xyBalance6     | "xxbxy"        | true                  |
+| xyBalance7     | "hi"           | true                  |
+| xyBalance8     | "y"            | true                  |
+| xyBalance9     | "yyxyxyxyx"    | false                 |
 
 ---
 
 ## How to Submit
 
-## TODO: Write instructions based on student experience.
-
-To check your work locally, enter `bash run_tests.sh` in your terminal window.
-
-To submit your work and check with the autograder, go to source control, write a message in the commit bar, hit the commit button and then hit sync. Take a minute and then check on your github to see the results. 
-
----
-
-## Important: Multiple Test Cases
-
-From here on out, **assignments will have different outputs for different inputs!** This means you can't just look at your program running one time to tell if it works — it may work on some inputs but not others. **Try your code against all of the grading criteria test cases** below and see if your program gives correct results.
-
-The last test is hidden. For now, you can assume that if your code passes the first five by doing the calculation, it will pass the hidden one. However, it is important to start thinking about how you could be more sure to account for *all possible* inputs.
-
----
+You will submit this programming assignment on Canvas. Remember to do the
+reflection as well!
 
 ## Grading Criteria
 
-| Test         | Description                                              |
-|--------------|----------------------------------------------------------|
-| `test1`      | Checks the program with an input of 70°F                 |
-| `test2`      | Checks the program with an input of 32°F                 |
-| `test3`      | Checks the program with an input of 0°F                  |
-| `test4`      | Checks the program with an input of 102°F                |
-| `test5`      | Checks the program with an input of -32°F                |
-| `hiddenTest` | Checks the program with an input unknown to the student  |
-| `checkHeader`| Checks to see if the header is on top of the code        |
+There are a ton of tests for this one — you should make sure to run all of
+them before submitting to make sure you have caught the corner cases.
+```
+
+---
