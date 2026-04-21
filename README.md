@@ -5,16 +5,7 @@
 The goal of this assignment is to start practicing using the String methods
 that can be found at the Quick Reference Document.
 
-For this assignment, you must follow directions **exactly**. **Create a PA13
-Java Project and create a PA13.java class. Make sure you don't make a module
-on accident.** When you run the code it will be blank.
-
-After you create the class, go to:
-https://drive.google.com/file/d/1xF_l00cpSgYEa-GO-exRiPmCIX7AAJs6/view?usp=sharing
-and **COPY and PASTE** the contents of that file into your PA13.java,
-completely overwriting everything in your file.
-
-**From here, you need to fill out each method and follow instructions exactly.
+**You need to fill out each method and follow instructions exactly.
 For this project, I am no longer walking you through how to test each method,
 that is up to you.**
 
@@ -176,10 +167,8 @@ makeAbba prints: null
 
 ## How to Submit
 
-You will submit this programming assignment on Canvas. Remember to do the
-reflection as well!
+TODO: Explain how to submit using github classroom.
 
 ## Grading Criteria
 
-There are a ton of tests for this one — you should make sure to run all of
-them before submitting to make sure you have caught the corner cases.
+Tests as above.
