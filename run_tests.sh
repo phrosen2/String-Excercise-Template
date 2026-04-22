@@ -4,7 +4,15 @@ set -e
 
 echo "Compiling..."
 
+
+
+if [[ "$OSTYPE" == "msys" ]]; then
+#For Windows
 javac -cp ".;./junit-platform-console-standalone-1.10.2.jar" -d . StringExercises.java StringExercisesTest.java
+else
+#For Unix-based OSes
+javac -cp ".:./junit-platform-console-standalone-1.10.2.jar" -d . StringExercises.java StringExercisesTest.java
+fi
 
 echo "Running tests..."
 
