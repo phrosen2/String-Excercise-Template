@@ -24,6 +24,17 @@ java -jar junit-platform-console-standalone-1.10.2.jar \
 
 echo "Complete! See results.txt for results."
 
+if [[ "$OSTYPE" == "msys" ]]; then
+#For Windows
+if grep [X] results.txt; then
+  cat results.txt
+  exit 1
+fi
+echo "All tests passed"
+exit 0
+fi
+
+#for other systems
 if grep ✘ results.txt; then
   cat results.txt
   exit 1
